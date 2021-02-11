@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap');
+
+$colors: (
+  callToActionBtn: hsl(0, 100%, 68%),
+  headerColor: hsl(230, 29%, 20%),
+  navActiveState: hsl(230, 11%, 40%),
+  bgNavRight: hsl(207, 33%, 95%)
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name );
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  // font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px;
+}
+
+header {
+  background-color: khaki;
+  padding: 2em 1em 1em 2em;
+  padding-top: 2em;
+
+  nav {
+    float: right;
+  }
+}
+
+.hero {
+  display: flex;
+
+  .hero-left {
+    background-color: lavenderblush;
+    flex: 1 1;
+    padding-left: 2em;
+  }
+  
+  .hero-right {
+    flex: 1 1;
+    background-color:lightblue;
+  }
+}

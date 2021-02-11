@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px; }
+
+header {
+  background-color: khaki;
+  padding: 2em 1em 1em 2em;
+  padding-top: 2em; }
+  header nav {
+    float: right; }
+
+.hero {
+  display: flex; }
+  .hero .hero-left {
+    background-color: lavenderblush;
+    flex: 1 1;
+    padding-left: 2em; }
+  .hero .hero-right {
+    flex: 1 1;
+    background-color: lightblue; }
+
+/*# sourceMappingURL=main.css.map */
