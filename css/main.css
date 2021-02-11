@@ -2,27 +2,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&display=swap");
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box; }
 
 body {
   font-family: 'Barlow', sans-serif;
   font-size: 18px; }
 
+body::after {
+  content: '';
+  background-color: #eef3f6; }
+
 header {
-  background-color: khaki;
   padding: 2em 1em 1em 2em;
   padding-top: 2em; }
   header nav {
     float: right; }
+    header nav .mobile-dropDown button.mobile-nav {
+      border: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: white; }
 
 .hero {
-  display: flex; }
-  .hero .hero-left {
-    background-color: lavenderblush;
-    flex: 1 1;
-    padding-left: 2em; }
-  .hero .hero-right {
-    flex: 1 1;
-    background-color: lightblue; }
+  display: flex;
+  flex-wrap: wrap-reverse; }
+  @media (max-width: 375px) {
+    .hero .hero-left {
+      width: 100%;
+      padding: 1em 1em 1em 2em; } }
+  @media (min-width: 600px) {
+    .hero .hero-left {
+      flex: 1 1; } }
+  .hero .hero-left ul.tags {
+    list-style: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: .9rem;
+    text-transform: uppercase; }
+    .hero .hero-left ul.tags li {
+      display: inline-block; }
+      .hero .hero-left ul.tags li:first-child {
+        background-color: #242942;
+        color: white;
+        padding: .3em .7em;
+        border-radius: 28px; }
+      .hero .hero-left ul.tags li:last-child {
+        color: #5b5f71;
+        letter-spacing: .3em;
+        margin-left: .7em; }
+  .hero .hero-left h1 {
+    color: #242942;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-top: .3em; }
+  .hero .hero-left p {
+    margin: 1em 0;
+    color: #5b5f71; }
+  .hero .hero-left button {
+    padding: .5em;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    text-transform: uppercase; }
+  .hero .hero-left button.demo-btn {
+    background-color: #ff5c5c;
+    color: white; }
+  .hero .hero-left button.preview-btn {
+    margin-left: .3em;
+    background-color: #eef3f6;
+    color: #5b5f71; }
+  @media (max-width: 375px) {
+    .hero .hero-right {
+      width: 100%;
+      padding: 1em 1em 1em 1em; } }
+  @media (min-width: 600px) {
+    .hero .hero-right {
+      flex: 1 1; } }
+  .hero .hero-right img {
+    width: 100%; }
+
+footer {
+  margin-top: 1em; }
 
 /*# sourceMappingURL=main.css.map */

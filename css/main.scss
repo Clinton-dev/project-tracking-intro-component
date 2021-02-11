@@ -12,8 +12,34 @@ $colors: (
   @return map-get($colors, $color-name );
 }
 
+// media queries 
+
+@mixin for-phone {
+  @media (max-width: 375px) { @content; }
+}
+@mixin for-phone-up {
+  @media (min-width: 376px) { @content; }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -23,27 +49,121 @@ body {
   font-size: 18px;
 }
 
+body::after {
+ content: '';
+ background-color: color(bgNavRight);
+}
+
 header {
-  background-color: khaki;
   padding: 2em 1em 1em 2em;
   padding-top: 2em;
 
   nav {
     float: right;
+
+    .mobile-dropDown {
+
+      button.mobile-nav {
+        border: none;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: white;
+        // outline: none;
+      }
+    }
   }
 }
 
 .hero {
   display: flex;
+  flex-wrap: wrap-reverse;
 
   .hero-left {
-    background-color: lavenderblush;
-    flex: 1 1;
-    padding-left: 2em;
+    // flex: 1 1;
+    
+    @include for-phone() {
+      width: 100%;
+      padding: 1em 1em 1em 2em;
+    }
+    
+    @include for-tablet-portrait-up() {
+      flex: 1 1;
+    }
+
+    ul.tags {
+      list-style: none;
+      // padding-left: 1.5em;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: .9rem;
+      text-transform: uppercase;
+      
+      li{
+        display: inline-block;
+
+        &:first-child {
+          background-color: color(headerColor);
+          color: white;
+          padding: .3em .7em;
+          border-radius: 28px;
+        }
+
+        &:last-child {
+          color: color(navActiveState);
+          letter-spacing: .3em;
+          margin-left: .7em;
+        }
+      }
+    }
+
+    h1 {
+      color: color(headerColor);
+      font-family: 'Barlow Condensed', sans-serif;
+      margin-top: .3em;
+    }
+    
+    p {
+      margin: 1em 0;
+      color: color(navActiveState);
+    }
+
+    button {
+      padding: .5em;
+      border-radius: 7px;
+      border: none;
+      outline: none;
+      text-transform: uppercase;
+    }
+
+    button.demo-btn {
+      background-color: color(callToActionBtn);
+      color: white;
+    }
+
+    button.preview-btn {
+      margin-left: .3em;
+      background-color: color(bgNavRight);
+      color: color(navActiveState);
+    }
   }
   
   .hero-right {
-    flex: 1 1;
-    background-color:lightblue;
+    // flex: 1 1;
+
+    @include for-phone() {
+      width: 100%;
+      padding: 1em 1em 1em 1em;
+    }
+
+    @include for-tablet-portrait-up() {
+      flex: 1 1;
+    }
+
+    img{
+      width: 100%;
+    }
   }
+}
+
+footer {
+  margin-top: 1em;
 }
