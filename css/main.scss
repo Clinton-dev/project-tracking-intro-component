@@ -56,12 +56,44 @@ body::after {
 
 header {
   padding: 2em 1em 1em 2em;
-  padding-top: 2em;
+  
+  @include for-tablet-portrait-up() {
+    padding: 3em 3em 1em 2em;
+    margin-bottom: 2.2em;
+
+  }
 
   nav {
     float: right;
 
+    .desktop-nav {
+      text-transform: uppercase;
+      font-family: 'Barlow Condensed', sans-serif;
+
+      @include for-phone() {
+        display: none;
+      }
+
+      ul {
+        list-style: none;
+        
+        li {
+          padding: .5em;
+          font-weight: 700;
+          display: inline-block;
+
+          &:last-child {
+            color: color(navActiveState);
+          }
+        }
+      }
+    }
+
     .mobile-dropDown {
+
+      @include for-tablet-portrait-up() {
+        display: none;
+      }
 
       button.mobile-nav {
         border: none;
@@ -74,6 +106,7 @@ header {
           display: none;
         }
       }
+
 
       .mobile-nav-wrapper {
         position: absolute;
@@ -110,6 +143,11 @@ header {
 .hero {
   display: flex;
   flex-wrap: wrap-reverse;
+  // overflow: hidden;
+
+  @include for-phone() {
+    margin-bottom: 2em;
+  }
 
   .hero-left {
     // flex: 1 1;
@@ -121,6 +159,7 @@ header {
     
     @include for-tablet-portrait-up() {
       flex: 1 1;
+      padding: 1em 1em 1em 2em;
     }
 
     ul.tags {
@@ -183,9 +222,13 @@ header {
   
   .hero-right {
     // flex: 1 1;
+    background-image: url(/images/illustration-devices.svg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
 
     @include for-phone() {
       width: 100%;
+      min-height: 55vh;
       padding: 1em 1em 1em 1em;
     }
 
@@ -200,5 +243,14 @@ header {
 }
 
 footer {
-  margin-top: 1em;
+  position: fixed;
+  bottom: 0;
+  left: 25%;
+  text-align: center;
+  display: block;
+  padding: 1em;
+  
+  @include for-phone() {
+    left: 5%;
+  }
 }
