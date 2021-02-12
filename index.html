@@ -21,8 +21,18 @@
       <img src="/images/logo.svg" alt="logo icon">
       <nav class="right">
         <div class="mobile-dropDown">
-          <button class="mobile-nav"><img src="/images/icon-hamburger.svg" alt="menu icon"></button>
-          
+          <button class="mobile-nav" onclick="displayNav()">
+            <img src="/images/icon-hamburger.svg" alt="menu icon" id="hamburger-icon">
+            <img src="/images/icon-close.svg" alt="close-icon" id="close-icon">
+          </button>
+          <div class="mobile-nav-wrapper" id="mobile-nav">
+            <ul>
+              <li>Product</li>
+              <li>Features</li>
+              <li>Pricing</li>
+              <li>Login</li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -49,5 +59,27 @@
     </footer>
   </div>
   
+  <script>
+    function displayNav() {
+      let navEle = document.getElementById("mobile-nav");
+      let hamMenuIcon = document.getElementById("hamburger-icon");
+      let closeIcon  = document.getElementById("close-icon");
+      console.log(closeIcon);
+      console.log(hamMenuIcon);
+      
+      if (navEle.style.display == "block") {
+        // console.log("display is none");
+        //TODO : fix mobile icon navigation issue
+        hamMenuIcon.style.display = "none";
+        closeIcon.style.display = "block";
+        navEle.style.display = "none";
+      }else{
+        // console.log("display is block");
+        navEle.style.display = "block";
+        hamMenuIcon.style.display = "block";
+        closeIcon.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>

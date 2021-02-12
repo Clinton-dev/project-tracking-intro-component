@@ -22,7 +22,30 @@ header {
       border: none;
       width: 2.5rem;
       height: 2.5rem;
-      background-color: white; }
+      background-color: white;
+      outline: none; }
+      header nav .mobile-dropDown button.mobile-nav #close-icon {
+        display: none; }
+    header nav .mobile-dropDown .mobile-nav-wrapper {
+      position: absolute;
+      width: 80%;
+      left: 10%;
+      top: 20%;
+      background-color: white;
+      box-shadow: 0 4px 12px #5b5f71;
+      text-align: center;
+      padding: 1em;
+      text-transform: uppercase;
+      font-family: 'Barlow Condensed', sans-serif;
+      display: none; }
+      header nav .mobile-dropDown .mobile-nav-wrapper ul {
+        list-style: none; }
+        header nav .mobile-dropDown .mobile-nav-wrapper ul li {
+          padding: .5em;
+          font-weight: 700; }
+          header nav .mobile-dropDown .mobile-nav-wrapper ul li:last-child {
+            color: #5b5f71;
+            border-top: 2px solid #eef3f6; }
 
 .hero {
   display: flex;

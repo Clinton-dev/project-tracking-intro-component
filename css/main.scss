@@ -68,11 +68,44 @@ header {
         width: 2.5rem;
         height: 2.5rem;
         background-color: white;
-        // outline: none;
+        outline: none;
+
+        #close-icon {
+          display: none;
+        }
+      }
+
+      .mobile-nav-wrapper {
+        position: absolute;
+        width: 80%;
+        left: 10%;
+        top: 20%;
+        background-color: white;
+        box-shadow: 0 4px 12px color(navActiveState);
+        text-align: center;
+        padding: 1em;
+        text-transform: uppercase;
+        font-family: 'Barlow Condensed', sans-serif;
+        display: none;
+
+        ul {
+          list-style: none;
+          
+          li {
+            padding: .5em;
+            font-weight: 700;
+
+            &:last-child {
+              color: color(navActiveState);
+              border-top: 2px solid color(bgNavRight);
+            }
+          }
+        }
       }
     }
   }
 }
+
 
 .hero {
   display: flex;
@@ -114,6 +147,8 @@ header {
         }
       }
     }
+
+    
 
     h1 {
       color: color(headerColor);
