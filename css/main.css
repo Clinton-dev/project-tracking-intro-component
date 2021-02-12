@@ -76,7 +76,8 @@ header {
   @media (max-width: 375px) {
     .hero .hero-left {
       width: 100%;
-      padding: 1em 1em 1em 2em; } }
+      padding: 1em 1em 1em 2em;
+      margin-top: 2.5em; } }
   @media (min-width: 600px) {
     .hero .hero-left {
       flex: 1 1;
@@ -105,16 +106,17 @@ header {
     margin: 1em 0;
     color: #5b5f71; }
   .hero .hero-left button {
-    padding: .5em;
+    padding: .4em;
     border-radius: 7px;
     border: none;
     outline: none;
     text-transform: uppercase; }
   .hero .hero-left button.demo-btn {
     background-color: #ff5c5c;
-    color: white; }
+    color: white;
+    font-weight: 700; }
   .hero .hero-left button.preview-btn {
-    margin-left: .3em;
+    margin-left: .17em;
     background-color: #eef3f6;
     color: #5b5f71; }
   .hero .hero-right {
@@ -125,7 +127,8 @@ header {
       .hero .hero-right {
         width: 100%;
         min-height: 55vh;
-        padding: 1em 1em 1em 1em; } }
+        padding: 1em 1em 1em 1em;
+        margin-top: 1.5em; } }
     @media (min-width: 600px) {
       .hero .hero-right {
         flex: 1 1; } }
@@ -133,14 +136,6 @@ header {
       width: 100%; }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 25%;
-  text-align: center;
-  display: block;
   padding: 1em; }
-  @media (max-width: 375px) {
-    footer {
-      left: 5%; } }
 
 /*# sourceMappingURL=main.css.map */
