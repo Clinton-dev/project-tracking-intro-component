@@ -19,6 +19,14 @@ header {
     header {
       padding: 3em 3em 1em 2em;
       margin-bottom: 2.2em; } }
+  @media (min-width: 900px) {
+    header {
+      padding: 3em 3em 1em 3em;
+      margin-bottom: 2em; } }
+  @media (min-width: 1200px) {
+    header {
+      padding: 3em 3em 1em 4em;
+      margin-bottom: 4em; } }
   header nav {
     float: right; }
     header nav .desktop-nav {
@@ -42,8 +50,14 @@ header {
           padding: .5em;
           font-weight: 700;
           display: inline-block; }
+          @media (min-width: 900px) {
+            header nav .desktop-nav ul li {
+              margin-left: 1em; } }
           header nav .desktop-nav ul li:last-child {
             color: #5b5f71; }
+            @media (min-width: 900px) {
+              header nav .desktop-nav ul li:last-child {
+                margin-left: 3.5em; } }
     @media (min-width: 600px) {
       header nav .mobile-dropDown {
         display: none; } }
@@ -96,6 +110,9 @@ header {
     .hero .hero-left {
       flex: 1 1;
       padding: 1em 1em 1em 2em; } }
+  @media (min-width: 900px) {
+    .hero .hero-left {
+      padding: 1em 1em 1em 3em; } }
   .hero .hero-left ul.tags {
     list-style: none;
     font-family: 'Barlow Condensed', sans-serif;

@@ -60,7 +60,16 @@ header {
   @include for-tablet-portrait-up() {
     padding: 3em 3em 1em 2em;
     margin-bottom: 2.2em;
+  }
 
+  @include for-tablet-landscape-up() {
+    padding: 3em 3em 1em 3em;
+    margin-bottom: 2em;
+  }
+
+  @include for-desktop-up() {
+    padding: 3em 3em 1em 4em;
+    margin-bottom: 4em;
   }
 
   nav {
@@ -94,8 +103,16 @@ header {
           font-weight: 700;
           display: inline-block;
 
+          @include for-tablet-landscape-up() {
+            margin-left: 1em;
+          }
+
           &:last-child {
             color: color(navActiveState);
+
+            @include for-tablet-landscape-up() {
+              margin-left: 3.5em;
+            }
           }
         }
       }
@@ -179,6 +196,10 @@ header {
     @include for-tablet-portrait-up() {
       flex: 1 1;
       padding: 1em 1em 1em 2em;
+    }
+    
+    @include for-tablet-landscape-up() {
+      padding: 1em 1em 1em 3em;
     }
 
     ul.tags {
