@@ -27,6 +27,9 @@ header {
       @media (max-width: 375px) {
         header nav .desktop-nav {
           display: none; } }
+      @media (min-width: 376px) {
+        header nav .desktop-nav {
+          display: none; } }
       header nav .desktop-nav ul {
         list-style: none; }
         header nav .desktop-nav ul li {
@@ -74,6 +77,11 @@ header {
     .hero {
       margin-bottom: 2em; } }
   @media (max-width: 375px) {
+    .hero .hero-left {
+      width: 100%;
+      padding: 1em 1em 1em 2em;
+      margin-top: 2.5em; } }
+  @media (min-width: 376px) {
     .hero .hero-left {
       width: 100%;
       padding: 1em 1em 1em 2em;
@@ -126,9 +134,14 @@ header {
     @media (max-width: 375px) {
       .hero .hero-right {
         width: 100%;
-        min-height: 55vh;
+        min-height: 65vh;
         padding: 1em 1em 1em 1em;
         margin-top: 1.5em; } }
+    @media (min-width: 376px) {
+      .hero .hero-right {
+        min-height: 55vh;
+        margin-top: 1.5em;
+        width: 100%; } }
     @media (min-width: 600px) {
       .hero .hero-right {
         flex: 1 1; } }
