@@ -69,14 +69,21 @@ header {
     .desktop-nav {
       text-transform: uppercase;
       font-family: 'Barlow Condensed', sans-serif;
-      // display: block;
-
+      
       @include for-phone() {
         display: none;
       }
       
       @include for-phone-up() {
         display: none;
+      }
+      
+      @include for-tablet-landscape-up() {
+        display: block;
+      }
+
+      @include for-tablet-portrait-up() {
+        display: block;
       }
 
       ul {
