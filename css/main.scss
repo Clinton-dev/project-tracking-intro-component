@@ -69,6 +69,7 @@ header {
     .desktop-nav {
       text-transform: uppercase;
       font-family: 'Barlow Condensed', sans-serif;
+      // display: block;
 
       @include for-phone() {
         display: none;
