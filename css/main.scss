@@ -68,7 +68,7 @@ header {
   }
 
   @include for-desktop-up() {
-    padding: 3em 3em 1em 4em;
+    padding: 3em 3em 1em 6em;
     margin-bottom: 4em;
   }
 
@@ -201,6 +201,11 @@ header {
     @include for-tablet-landscape-up() {
       padding: 1em 1em 1em 3em;
     }
+    
+    @include for-desktop-up() {
+      padding: 1em 1em 1em 6em;
+
+    }
 
     ul.tags {
       list-style: none;
@@ -246,6 +251,10 @@ header {
       border: none;
       outline: none;
       text-transform: uppercase;
+
+      @include for-desktop-up() {
+        padding: 1em;
+      }
     }
 
     button.demo-btn {
@@ -260,6 +269,10 @@ header {
       margin-left: .17em;
       background-color: color(bgNavRight);
       color: color(navActiveState);
+
+      @include for-desktop-up() {
+        margin-left: 1em;
+      }
     }
   }
   
