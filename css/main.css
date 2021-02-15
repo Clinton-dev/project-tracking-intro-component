@@ -29,6 +29,11 @@ header {
       margin-bottom: 4em; } }
   header nav {
     float: right; }
+    header nav a {
+      text-decoration: none;
+      color: #242942; }
+      header nav a:focus, header nav a:hover {
+        text-decoration: underline; }
     header nav .desktop-nav {
       text-transform: uppercase;
       font-family: 'Barlow Condensed', sans-serif; }
@@ -53,10 +58,10 @@ header {
           @media (min-width: 900px) {
             header nav .desktop-nav ul li {
               margin-left: 1em; } }
-          header nav .desktop-nav ul li:last-child {
+          header nav .desktop-nav ul li:last-child a {
             color: #5b5f71; }
             @media (min-width: 900px) {
-              header nav .desktop-nav ul li:last-child {
+              header nav .desktop-nav ul li:last-child a {
                 margin-left: 3.5em; } }
     @media (min-width: 600px) {
       header nav .mobile-dropDown {
@@ -152,6 +157,8 @@ header {
     background-color: #ff5c5c;
     color: white;
     font-weight: 700; }
+    .hero .hero-left button.demo-btn:hover, .hero .hero-left button.demo-btn:focus {
+      background-color: #ff8f8f; }
   .hero .hero-left button.preview-btn {
     margin-left: .17em;
     background-color: #eef3f6;

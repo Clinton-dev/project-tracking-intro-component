@@ -75,6 +75,17 @@ header {
   nav {
     float: right;
 
+   //for links found in header section 
+    a {
+      text-decoration: none;
+      color: color(headerColor);
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     .desktop-nav {
       text-transform: uppercase;
       font-family: 'Barlow Condensed', sans-serif;
@@ -107,7 +118,7 @@ header {
             margin-left: 1em;
           }
 
-          &:last-child {
+          &:last-child a {
             color: color(navActiveState);
 
             @include for-tablet-landscape-up() {
@@ -262,6 +273,11 @@ header {
       color: white;
       // font-size: .8rem;
       font-weight: 700;
+
+      &:hover,
+      &:focus {
+        background-color: lighten(color(callToActionBtn), 10%);
+      }
     }
     
     button.preview-btn {
