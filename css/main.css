@@ -7,11 +7,28 @@
 
 body {
   font-family: 'Barlow', sans-serif;
-  font-size: 18px; }
+  font-size: 18px;
+  overflow: hidden; }
 
 body::after {
   content: '';
-  background-color: #eef3f6; }
+  border-style: solid;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border-color: #eef3f6; }
+  @media (max-width: 375px) {
+    body::after {
+      border-width: 17em 5em;
+      border-bottom-left-radius: 2em; } }
+  @media (min-width: 376px) {
+    body::after {
+      border-width: 8em 8em;
+      border-bottom-left-radius: 2em; } }
+  @media (min-width: 1200px) {
+    body::after {
+      border-width: 10em 18em; } }
 
 header {
   padding: 2em 1em 1em 2em; }
@@ -70,7 +87,7 @@ header {
       border: none;
       width: 2.5rem;
       height: 2.5rem;
-      background-color: white;
+      background-color: #eef3f6;
       outline: none; }
       header nav .mobile-dropDown button.mobile-nav #close-icon {
         display: none; }

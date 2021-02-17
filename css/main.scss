@@ -47,11 +47,35 @@ body {
   font-family: 'Barlow', sans-serif;
   // font-family: 'Barlow Condensed', sans-serif;
   font-size: 18px;
+  overflow: hidden;
 }
 
+// background img
 body::after {
- content: '';
- background-color: color(bgNavRight);
+
+  content: '';
+  // height width specs
+  border-style: solid;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  border-color: color(bgNavRight);
+  
+  @include for-phone() {
+    border-width: 17em 5em;
+    border-bottom-left-radius: 2em;
+  }
+  
+  @include for-phone-up() {
+    border-width: 8em 8em;
+    border-bottom-left-radius: 2em;
+  }
+  
+  @include for-desktop-up() {
+    border-width: 10em 18em;
+
+  }
 }
 
 header {
@@ -86,6 +110,7 @@ header {
       }
     }
 
+    // display desktop nav
     .desktop-nav {
       text-transform: uppercase;
       font-family: 'Barlow Condensed', sans-serif;
@@ -129,17 +154,20 @@ header {
       }
     }
 
+    // display mobile nav
     .mobile-dropDown {
 
       @include for-tablet-portrait-up() {
         display: none;
       }
+      
+      
 
       button.mobile-nav {
         border: none;
         width: 2.5rem;
         height: 2.5rem;
-        background-color: white;
+        background-color: color(bgNavRight);
         outline: none;
 
         #close-icon {
